@@ -37,7 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+]
+
+INSTALLED_APPS += [
+    'app.comment.apps.CommentConfig',
+    'app.core.apps.CoreConfig',
+    'app.group.apps.GroupConfig',
     'app.people.apps.PeopleConfig',
+    'app.subject.apps.SubjectConfig',
+    'app.task.apps.TaskConfig',
 ]
 
 MIDDLEWARE = [
@@ -50,7 +58,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'lifemanagement_webapp.urls'
+ROOT_URLCONF = 'system.urls'
 
 TEMPLATES = [
     {
