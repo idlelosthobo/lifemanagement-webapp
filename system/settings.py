@@ -43,7 +43,9 @@ INSTALLED_APPS += [
     'app.comment.apps.CommentConfig',
     'app.core.apps.CoreConfig',
     'app.group.apps.GroupConfig',
+    'app.invitation.apps.InvitationConfig',
     'app.people.apps.PeopleConfig',
+    'app.registration.apps.RegistrationConfig',
     'app.subject.apps.SubjectConfig',
     'app.task.apps.TaskConfig',
 ]
