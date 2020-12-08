@@ -26,6 +26,10 @@ INSTALLED_APPS = [
 ]
 
 INSTALLED_APPS += [
+    'crispy_forms',
+]
+
+INSTALLED_APPS += [
     'app.comment.apps.CommentConfig',
     'app.core.apps.CoreConfig',
     'app.group.apps.GroupConfig',
@@ -102,3 +106,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

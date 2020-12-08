@@ -1,0 +1,20 @@
+{% extends 'landing/page/base.html' %}
+
+{% block body %}
+    <div class="container-fluid p-0 m-0">
+        {% block content %}
+            <section class="upper">
+                <div class="container">
+                    <div class="col-lg-5 col-md-8 mx-auto">
+                        <div class="card bg-secondary shadow border-0">
+                            <div class="card-body px-lg-5 py-lg-5">
+                                {% block card_content %}
+                                {% endblock %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        {% endblock %}
+    </div>
+{% endblock %}
