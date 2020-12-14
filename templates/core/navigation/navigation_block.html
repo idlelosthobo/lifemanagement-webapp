@@ -1,0 +1,10 @@
+<li class="nav-item">
+    {% block link_block %}
+    {% endblock %}
+    <div class="collapse" id="navbar-{{ control }}">
+        <ul class="nav nav-sm flex-column">
+            {% block sub_link_block %}
+            {% endblock %}
+        </ul>
+    </div>
+</li>

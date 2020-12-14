@@ -1,0 +1,14 @@
+{% extends 'core/navigation/navigation_block.html' %}
+
+{% block control %}
+    welcome
+{% endblock %}
+
+{% block link_block %}
+    {% include 'core/navigation/navigation_block_link.html' with text='Welcome' icon='fas fa-door-open' %}
+{% endblock %}
+
+{% block sub_link_block %}
+    {% url 'welcome' as the_url %}
+    {% include 'core/navigation/navigation_block_sub_link.html' with text='Home' text_mini='Home' href=the_url %}
+{% endblock %}

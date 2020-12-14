@@ -1,7 +1,7 @@
 {% extends 'core/card/card.html' %}
 
 {% block card %}
-    <div class="card-header py-2 px-3 org-bg-card-header">
+    <div class="card-header py-2 px-3 org-bg-card-header border">
         <div class="float-right">
             {% block card_header_right %}
             {% endblock %}
@@ -9,7 +9,7 @@
         {% block card_header %}
         {% endblock %}
     </div>
-    <div class="card-body {% block card_body_class %}p-3{% endblock %}">
+    <div class="card-body border-left border-right border-bottom {% block card_body_class %}p-3{% endblock %}">
         {% block card_body %}
         {% endblock %}
     </div>
