@@ -6,8 +6,6 @@ DEBUG = True
 # URL settings
 ROOT_URLCONF = 'system.development.urls'
 
-ALLOWED_HOSTS = ['127.0.0.1']
-
 # Database Settings
 DATABASES = {
     'default': {

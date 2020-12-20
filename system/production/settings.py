@@ -6,8 +6,6 @@ DEBUG = False
 # URL settings
 ROOT_URLCONF = 'system.production.urls'
 
-ALLOWED_HOSTS = ['127.0.0.1']
-
 # Database Settings
 DATABASES = {
     'default': {
