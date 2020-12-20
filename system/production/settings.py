@@ -1,7 +1,7 @@
 from system.base_settings import *
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # URL settings
 ROOT_URLCONF = 'system.production.urls'
