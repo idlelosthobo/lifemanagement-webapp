@@ -1,0 +1,10 @@
+{% extends 'core/navigation/navigation_block.html' %}
+
+{% block link_block %}
+    {% include 'core/navigation/navigation_block_link.html' with text='People' icon='fas fa-user-friends' %}
+{% endblock %}
+
+{% block sub_link_block %}
+    {% url 'welcome' as the_url %}
+    {% include 'core/navigation/navigation_block_sub_link.html' with text='Add Person' text_mini='+Per' href=the_url %}
+{% endblock %}
