@@ -1,7 +1,7 @@
 from system.base_settings import *
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # URL settings
 ROOT_URLCONF = 'system.production.urls'
@@ -26,14 +26,12 @@ DATABASES = {
 # SERVER_EMAIL = DEFAULT_FROM_EMAIL
 
 # Static Settings
-# if not DEBUG:
-#     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-# else:
-#     STATICFILES_DIRS = [
-#         os.path.join(BASE_DIR, "static"),
-#     ]
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+if not DEBUG:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+else:
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, "static"),
+    ]
 
 #Hosting Settings
 WSGI_APPLICATION = 'system.production.wsgi.application'
