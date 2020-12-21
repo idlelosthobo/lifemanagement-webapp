@@ -1,0 +1,47 @@
+{% extends 'core/card/card_header.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block card_header %}
+    {{ title }}
+{% endblock %}
+
+{% block card_body_class %}
+    p-0
+{% endblock %}
+
+{% block card_body %}
+    <style>
+        .table {
+            overflow: visible;
+        }
+
+        .table tbody td.text-right, .data-table tfoot th.text-right {
+            padding-right: 1.5em;
+        }
+
+        .table tbody td {
+            outline: none;
+        }
+
+        .table thead th {
+            outline: none;
+            cursor: pointer;
+            border-top: 0px;
+        }
+    </style>
+    <table class="table no-wrap dt-nowrap m-0 w-100 border-top-0">
+        <thead class="org-bg-100">
+        {% block table_thead %}
+        {% endblock %}
+        </thead>
+        <tbody class="{% block data_table_tbody_class %}{% endblock %}">
+        {% block table_tbody %}
+        {% endblock %}
+        </tbody>
+        <tfoot>
+        {% block table_tfoot %}
+        {% endblock %}
+        </tfoot>
+    </table>
+{% endblock %}

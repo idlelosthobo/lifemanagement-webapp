@@ -5,6 +5,8 @@
 {% endblock %}
 
 {% block sub_link_block %}
-    {% url 'welcome' as the_url %}
-    {% include 'core/navigation/navigation_block_sub_link.html' with text='Add Person' text_mini='+Per' href=the_url %}
+    {% url 'people_form' pk=0 as the_url %}
+    {% include 'core/navigation/navigation_block_sub_link.html' with text='Add Person' text_mini='aPer' href=the_url %}
+    {% url 'people_list' as the_url %}
+    {% include 'core/navigation/navigation_block_sub_link.html' with text='View People' text_mini='vPeo' href=the_url %}
 {% endblock %}

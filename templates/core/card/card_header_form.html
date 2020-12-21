@@ -1,0 +1,11 @@
+{% extends 'core/card/card_header.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block card_header %}
+    {{ form_title }}
+{% endblock %}
+
+{% block card_body %}
+    {% crispy form %}
+{% endblock %}
