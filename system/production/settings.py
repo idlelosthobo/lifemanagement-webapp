@@ -36,7 +36,3 @@ else:
 #Hosting Settings
 WSGI_APPLICATION = 'system.production.wsgi.application'
 
-#Login Settings
-LOGIN_URL = 'login'
-LOGIN_REDIRECT_URL = "/accounts/logged_in/"
-LOGOUT_REDIRECT_URL = "/accounts/login/"
