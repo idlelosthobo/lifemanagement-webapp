@@ -1,6 +1,6 @@
 {% extends 'core/page/base.html' %}
 
-{% block body %}
+{% block base_body %}
     {% include 'core/navigation/navigation_side.html' %}
 
     <div class="main-content" id="panel">
@@ -8,7 +8,7 @@
         {% include 'core/navigation/navigation_top.html' %}
 
         <div class="container-fluid">
-            {% block content %}
+            {% block page_content %}
             {% endblock %}
             {% include 'core/navigation/navigation_bottom.html' %}
         </div>

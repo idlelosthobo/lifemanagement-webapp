@@ -1,7 +1,10 @@
 from django.db import models
-from app.group.models import Group
 from django.contrib.auth.models import User
+from django.contrib.contenttypes.fields import GenericRelation
 from django.utils.timezone import now
+
+from app.group.models import Group
+from app.core.models import Event
 
 PEOPLE_RELATIONSHIP_CHOICES = (
     ('frie', 'Friend'),
@@ -16,6 +19,7 @@ PEOPLE_RELATIONSHIP_CHOICES = (
 class People(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, editable=False)
     group = models.ForeignKey(Group, on_delete=models.SET_NULL, null=True, related_name='person', related_query_name='people', editable=False)
+    event = GenericRelation(Event, related_name='events', related_query_name='event')
 
     first_name = models.CharField(max_length=64, default='')
     middle_name = models.CharField(max_length=64, default='', blank=True)
@@ -25,8 +29,3 @@ class People(models.Model):
     relationship = models.CharField(max_length=4, choices=PEOPLE_RELATIONSHIP_CHOICES, default='frie')
 
 
-class PeopleDates(models.Model):
-    people = models.ForeignKey(People, on_delete=models.CASCADE, related_name='dates', related_query_name='date')
-    name = models.CharField(max_length=32)
-    start = models.DateTimeField(default=now)
-    finish = models.DateTimeField(default=now)

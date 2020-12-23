@@ -1,9 +1,9 @@
 {% extends 'landing/page/base.html' %}
 
-{% block body %}
+{% block base_body %}
     <div class="container-fluid p-0 m-0">
         {% include 'landing/navigation/navigation_top.html' %}
-        {% block content %}
+        {% block page_content %}
         {% endblock %}
         {% include 'landing/navigation/navigation_bottom.html' %}
     </div>
