@@ -1,0 +1,23 @@
+{% extends 'landing/page/page_card_banner.html' %}
+
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block card_content %}
+    <h1>{% trans "Sign Out" %}</h1>
+
+    <p>{% trans 'Are you sure you want to sign out?' %}</p>
+
+    <form method="post" action="{% url 'account_logout' %}">
+        {% csrf_token %}
+        {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+        {% endif %}
+        <button type="submit" class="btn btn-warning">{% trans 'Sign Out' %}</button>
+    </form>
+    <div class="card-footer text-center">
+        {#        <p>Register for an Account <a href="{% url 'register' %}">Here</a></p>#}
+        {#        <p><a href="{% url 'password_reset' %}">Forgot My Password</a></p>#}
+    </div>
+{% endblock %}
+
