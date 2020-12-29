@@ -25,10 +25,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 ]
 
 INSTALLED_APPS += [
     'crispy_forms',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
 
 INSTALLED_APPS += [
@@ -72,6 +76,15 @@ TEMPLATES = [
     },
 ]
 
+# Allauth Settings
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+SITE_ID = 1
+
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -113,6 +126,6 @@ STATIC_URL = '/static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 #Login Settings
-LOGIN_URL = 'login'
+LOGIN_URL = 'account_login'
 LOGIN_REDIRECT_URL = 'welcome'
-LOGOUT_REDIRECT_URL = 'login'
+LOGOUT_REDIRECT_URL = 'account_login'
