@@ -14,10 +14,10 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/accounts/login/",
+  "start_url": "/app/accounts/login/",
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
   "orientation": "portrait",
-  "scope": "/",
+  "scope": "/app/",
   "display": "standalone"
 }
