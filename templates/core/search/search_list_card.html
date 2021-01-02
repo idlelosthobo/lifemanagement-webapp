@@ -1,0 +1,17 @@
+{% extends 'core/card/card_header_table.html' %}
+
+{% block card_header %}
+    Search
+{% endblock %}
+
+{% block table_thead %}
+    <th>Information</th>
+{% endblock %}
+
+{% block table_tbody %}
+    {% for search_result in search_result_list %}
+        <tr>
+        <td>{{ search_result.information }}</td>
+        </tr>
+    {% endfor %}
+{% endblock %}

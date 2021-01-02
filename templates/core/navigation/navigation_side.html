@@ -22,7 +22,11 @@
             <div class="collapse navbar-collapse" id="sidenav-collapse-main">
                 <ul class="navbar-nav">
                     {% include 'welcome/navigation/navigation_welcome_block.html' with control='welcome' %}
+                    {% include 'finance/navigation/navigation_finance_block.html'%}
+                    {% include 'list/navigation/navigation_list_block.html'%}
+                    {% include 'note/navigation/navigation_note_block.html'%}
                     {% include 'people/navigation/navigation_people_block.html' with control='people' %}
+                    {% include 'task/navigation/navigation_task_block.html'%}
                 </ul>
 
                 {% include 'core/navigation/navigation_divider.html' %}

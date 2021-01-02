@@ -1,5 +1,9 @@
-<a class="nav-link" href="#navbar-{{ control }}" data-toggle="collapse" role="button"
-   aria-expanded="false" aria-controls="navbar-{{ control }}">
-    <i class="{{ icon }}"></i>
+{% if control %}
+    <a class="nav-link pl-3" href="#navbar-{{ control }}" data-toggle="collapse" role="button"
+       aria-expanded="false" aria-controls="navbar-{{ control }}">
+{% else %}
+    <a class="nav-link pl-3" href="{{ href }}" role="button">
+{% endif %}
+    <i class="{{ icon }} fa-fw mr-2"></i>
     <span class="nav-link-text">{{ text }}</span>
 </a>

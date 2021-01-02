@@ -1,0 +1,7 @@
+{% extends 'core/navigation/navigation_block.html' %}
+
+{% block link_block %}
+    {% url 'welcome' as the_url %}
+    {% include 'core/navigation/navigation_block_link.html' with text='Task' icon='fas fa-check-double' href=the_url %}
+{% endblock %}
+

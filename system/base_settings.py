@@ -38,8 +38,11 @@ INSTALLED_APPS += [
 INSTALLED_APPS += [
     'app.comment.apps.CommentConfig',
     'app.core.apps.CoreConfig',
+    'app.finance.apps.FinanceConfig',
     'app.group.apps.GroupConfig',
     'app.invitation.apps.InvitationConfig',
+    'app.list.apps.ListConfig',
+    'app.note.apps.NoteConfig',
     'app.people.apps.PeopleConfig',
     'app.registration.apps.RegistrationConfig',
     'app.subject.apps.SubjectConfig',
