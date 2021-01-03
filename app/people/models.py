@@ -4,7 +4,7 @@ from django.contrib.contenttypes.fields import GenericRelation
 from django.utils.timezone import now
 
 from app.group.models import Group
-from app.core.models import Event
+from app.event.models import Event
 
 PEOPLE_RELATIONSHIP_CHOICES = (
     ('frie', 'Friend'),
