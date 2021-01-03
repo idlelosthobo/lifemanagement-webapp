@@ -9,12 +9,8 @@ ROOT_URLCONF = 'system.development.urls'
 # Database Settings
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'development_dandy_organizer',
-        'USER': 'dandyaccess',
-        'PASSWORD': 'zv6l76rc8cp39d39',
-        'HOST': 'db-mysql-tor1-30973-do-user-6683175-0.db.ondigitalocean.com',
-        'PORT': '25060',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
