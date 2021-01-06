@@ -9,11 +9,14 @@ ROOT_URLCONF = 'system.development.urls'
 # Database Settings
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'db',
+        'USER': 'db',
+        'PASSWORD': 'zbwwn9t0tysfo1pp',
+        'HOST': 'app-d70a4f60-2f5d-41e9-9f67-2ed903d0c737-do-user-6683175-0.b.db.ondigitalocean.com',
+        'PORT': '25060',
     }
 }
-
 
 # Email Settings
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

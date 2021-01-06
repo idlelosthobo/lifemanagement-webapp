@@ -33,6 +33,8 @@ INSTALLED_APPS += [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'webpush',
+    'pwa',
 ]
 
 INSTALLED_APPS += [
@@ -107,6 +109,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+WEBPUSH_SETTINGS = {
+    'VAPID_PUBLIC_KEY': 'BFEnTPYe0Ur1NAdUkR0S6dXch7_qVK8Fj6HJyXQF6Zd8DTRReZdRQ814sa2KbapffhlLWZZMEq4AiELpiWL3Yfc',
+    'VAPID_PRIVATE_KEY': 'HAG02n_DS9dWZsoHhZI1oHUn26bVrVWRezAvdXsKONQ',
+    'VAPID_ADMIN_EMAIL': 'drugen@gmail.com'
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
@@ -129,7 +136,34 @@ STATIC_URL = '/static/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-#Login Settings
+# Login Settings
+
 LOGIN_URL = 'account_login'
 LOGIN_REDIRECT_URL = 'welcome'
 LOGOUT_REDIRECT_URL = 'account_login'
+
+# PWA Settings
+
+PWA_APP_NAME = 'Dandy Organizer'
+PWA_APP_DESCRIPTION = "An organizer to manage everything in your life"
+PWA_APP_THEME_COLOR = '#ffffff'
+PWA_APP_BACKGROUND_COLOR = '#ffffff'
+PWA_APP_DISPLAY = 'standalone'
+PWA_APP_SCOPE = '/app/'
+PWA_APP_ORIENTATION = 'any'
+PWA_APP_START_URL = '/app/accounts/login/'
+PWA_APP_STATUS_BAR_COLOR = 'default'
+PWA_APP_ICONS = [
+    {
+        'src': '/static/core/img/favicons/dandy-organizer-192.png',
+        'sizes': '192x192'
+    }
+]
+PWA_APP_ICONS_APPLE = [
+    {
+        'src': '/static/core/img/favicons/dandy-organizer-192.png',
+        'sizes': '192x192'
+    }
+]
+PWA_APP_DIR = 'ltr'
+PWA_APP_LANG = 'en-US'
