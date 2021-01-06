@@ -9,11 +9,11 @@ ROOT_URLCONF = 'system.production.urls'
 # Database Settings
 DATABASES = {
     'default': {
-        'ENGINE': 'app-d70a4f60-2f5d-41e9-9f67-2ed903d0c737-do-user-6683175-0.b.db.ondigitalocean.com',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'db',
         'USER': 'db',
         'PASSWORD': 'zbwwn9t0tysfo1pp',
-        'HOST': '127.0.0.1',
+        'HOST': 'app-d70a4f60-2f5d-41e9-9f67-2ed903d0c737-do-user-6683175-0.b.db.ondigitalocean.com',
         'PORT': '25060',
     }
 }
