@@ -1,19 +1,29 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-default sticky-top">
+{% load static %}
+
+<nav class="navbar navbar-expand-lg bg-white bg-default sticky-top border-bottom">
     <div class="container">
 
-        <a class="navbar-brand" href="#">{{ software.name }}</a>
+        <a class="navbar-brand m-0" href="#">
+                <img class="float-left mt--1" style=" height: 60px; " src="{% static "core/img/favicons/dandy-organizer-192.png" %}">
+                <div class="display-3 float-left ml-3 d-none d-sm-block" style="color: #005F74;">
+                    {{ software.name }}
+                </div>
+                <div class="display float-left ml-3 d-block d-sm-none mt-3" style="color: #005F74;">
+                    {{ software.name }}
+                </div>
+        </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default"
                 aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbar-default">
-            <div class="navbar-collapse-header">
+        <div class="collapse navbar-collapse border-none" id="navbar-default">
+            <div class="navbar-collapse-header mb-0 pb-0 border-bottom-0">
                 <div class="row">
                     <div class="col-6 collapse-brand">
-                        <a href="index.html">
-                            <img src="assets/img/brand/blue.png">
+                        <a href="#">
+                            <img src="{% static 'core/img/favicons/dandy-organizer-192.png' %}">
                         </a>
                     </div>
                     <div class="col-6 collapse-close">
@@ -27,38 +37,28 @@
                 </div>
             </div>
 
-            <ul class="navbar-nav ml-lg-auto">
+            <ul class="navbar-nav ml-lg-auto my-3 my-lg-0 mr-1">
                 <li class="nav-item">
                     <a class="nav-link nav-link-icon" href="#">
-                        Getting Started
-                        <span class="nav-link-inner--text d-lg-none">Discover</span>
+                        What is this?
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nav-link-icon" href="#">
-                        Pricing
-                        <span class="nav-link-inner--text d-lg-none">Profile</span>
+                        Features
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link nav-link-icon" href="#" id="navbar-default_dropdown_1" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Features
-                        <span class="nav-link-inner--text d-lg-none">Settings</span>
+                    <a class="nav-link nav-link-icon" href="#">
+                        Pricing
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
                 </li>
             </ul>
-            <a href="{% url 'account_signup' %}" class="btn btn-outline-primary">
-                    Signup
+            <a href="{% url "account_signup" %}" class="btn btn-outline-primary mr-3">
+                Signup
             </a>
-            <a href="{% url 'account_login' %}" class="btn btn-success">
-                    Login
+            <a href="{% url "account_login" %}" class="btn btn-outline-success">
+                Login
             </a>
 
         </div>
