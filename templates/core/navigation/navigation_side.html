@@ -3,12 +3,12 @@
     <div class="scrollbar-inner">
         <!-- Brand -->
         <div class="sidenav-header  d-flex  align-items-center">
-            <a class="navbar-brand pl-3" href="{% url 'welcome' %}">
-                <h3>{{ software.name}}</h3>
-            </a>
+            <span class="navbar-brand pl-4 mt--2 pr-0">
+                <h2 class="org-main-color text-nowrap overflow-hidden">{{ software.name}}</h2>
+            </span>
             <div class="ml-auto">
                 <!-- Sidenav toggler -->
-                <div class="sidenav-toggler d-none d-xl-block" data-action="sidenav-unpin" data-target="#sidenav-main">
+                <div class="sidenav-toggler d-none d-xl-block mt--3" data-action="sidenav-unpin" data-target="#sidenav-main">
                     <div class="sidenav-toggler-inner">
                         <i class="sidenav-toggler-line"></i>
                         <i class="sidenav-toggler-line"></i>
@@ -17,7 +17,7 @@
                 </div>
             </div>
         </div>
-        <div class="navbar-inner">
+        <div class="navbar-inner" style="margin-top: -36px; ">
             <!-- Collapse -->
             <div class="collapse navbar-collapse" id="sidenav-collapse-main">
                 <ul class="navbar-nav">

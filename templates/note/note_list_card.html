@@ -1,0 +1,24 @@
+{% extends 'core/card/card_header_table.html' %}
+
+{% block card_header %}
+    Notes
+{% endblock %}
+
+{% block card_header_right %}
+    {% url 'note_form' pk=0 as the_url %}
+    {% include 'core/element/element_card_header_button.html' with label='Add' href=the_url icon='fas fa-plus' %}
+{% endblock %}
+
+{% block table_thead %}
+    <th>Title</th>
+    <th>Date Entered</th>
+{% endblock %}
+
+{% block table_tbody %}
+    {% for note in note_list %}
+        <tr>
+            <td onClick="document.location.href='{% url 'note_detail' pk=note.id %}';">{{ note.title }}</td>
+            <td onClick="document.location.href='{% url 'note_detail' pk=note.id %}';">{{ note.date_entered }}</td>
+        </tr>
+    {% endfor %}
+{% endblock %}

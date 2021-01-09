@@ -1,0 +1,10 @@
+<a href="{{ href }}" type="button" class="btn btn-primary p-1 ml-1 mr-0">
+    {% if icon %}
+        <i class="{{ icon }} fa-fw mx-1"></i>
+    {% endif %}
+    {% if label %}
+        <span class="mr-1">
+            {{ label }}
+        </span>
+    {% endif %}
+</a>

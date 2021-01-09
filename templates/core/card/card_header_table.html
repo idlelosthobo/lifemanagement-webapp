@@ -12,22 +12,25 @@
 
 {% block card_body %}
     <style>
-        .table {
+        .card .table {
             overflow: visible;
         }
 
-        .table tbody td.text-right, .data-table tfoot th.text-right {
+        .card .table tbody td.text-right, .data-table tfoot th.text-right {
             padding-right: 1.5em;
         }
 
-        .table tbody td {
+        .card .table tbody td {
             outline: none;
+            font-size: 1rem;
+            padding: 1.0em;
+            cursor: pointer;
         }
 
-        .table thead th {
+        .card .table thead th {
             outline: none;
-            cursor: pointer;
             border-top: 0px;
+            padding: 1.5em;
         }
     </style>
     <table class="table no-wrap dt-nowrap m-0 w-100 border-top-0">

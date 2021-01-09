@@ -1,0 +1,28 @@
+{% extends 'core/card/card_header.html' %}
+
+{% load humanize %}
+
+{% block card_header %}
+    {{ note.title }}
+{% endblock %}
+
+{% block card_header_right %}
+    {% url 'note_form' pk=note.id as the_url %}
+    {% include 'core/element/element_card_header_button.html' with label='Edit' href=the_url icon='fas fa-pen' %}
+    {% url 'note_list' as the_url %}
+    {% include 'core/element/element_card_header_button.html' with href=the_url icon='fas fa-times' %}
+{% endblock %}
+
+{% block card_body %}
+    <div class="row">
+        <div class="col-md-12">
+            {% include 'core/element/element_attribute_label.html' with label='Information' %}
+            {{ note.information|linebreaks }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            {% include 'core/element/element_date_entered.html' with date=note.date_entered|naturalday %}
+        </div>
+    </div>
+{% endblock %}

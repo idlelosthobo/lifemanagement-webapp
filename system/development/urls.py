@@ -9,4 +9,5 @@ urlpatterns = [
     path('app/accounts/', include('app.registration.urls')),
     path('app/welcome/', include('app.welcome.urls')),
     path('app/people/', include('app.people.urls')),
+    path('app/note/', include('app.note.urls')),
 ]

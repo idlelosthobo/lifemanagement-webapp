@@ -7,7 +7,7 @@ from app.core.models import Security, Statistic
 class SecurityMixin(models.Model):
     security = GenericRelation(Security, related_name='securities', related_query_name='security')
 
-    def update(self, user):
+    def update_security(self, user):
         try:
             security = Security.objects.get(content_type__model=self, object_id=self.pk, user=user)
         except Statistic.DoesNotExist:
@@ -52,7 +52,7 @@ class StatisticMixin(models.Model):
     date_updated = models.DateTimeField(auto_now=True, editable=False)
     statistic = GenericRelation(Statistic, related_name='statistics', related_query_name='statistic', editable=False)
 
-    def update(self, user):
+    def update_statistic(self, user):
         try:
             statistic = Statistic.objects.get(content_type__model=self, object_id=self.pk, user=user)
         except Statistic.DoesNotExist:
