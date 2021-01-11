@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Search form -->
-            <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main"
+            <form data-swup-form data-swup-transition="transition-fade" class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main"
                   action="{% url 'search' %}" method="get">
                 <div class="form-group my-0">
                     <div class="input-group input-group-alternative input-group-merge">
@@ -103,13 +103,14 @@
     <div class="container-fluid d-none d-sm-block">
         <div class="header-body">
             <div class="row align-items-center py-1">
-                <div class="col-lg-6 col-7">
-                    <h6 class="h2 text-white d-inline-block mb-0">Default</h6>
-                    <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
                         <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                            <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                            <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Default</li>
+                            {% block bread_crumb_list %}
+                                <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Default</li>
+                            {% endblock %}
                         </ol>
                     </nav>
                 </div>

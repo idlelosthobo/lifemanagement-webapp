@@ -17,8 +17,8 @@
 {% block table_tbody %}
     {% for note in note_list %}
         <tr>
-            <td onClick="document.location.href='{% url 'note_detail' pk=note.id %}';">{{ note.title }}</td>
-            <td onClick="document.location.href='{% url 'note_detail' pk=note.id %}';">{{ note.date_entered }}</td>
+            <td onClick="swup.loadPage({ url: '{% url 'note_detail' pk=note.id %}' });">{{ note.title }}</td>
+            <td onClick="swup.loadPage({ url: '{% url 'note_detail' pk=note.id %}' });">{{ note.date_entered }}</td>
         </tr>
     {% endfor %}
 {% endblock %}

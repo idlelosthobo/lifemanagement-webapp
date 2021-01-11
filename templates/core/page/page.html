@@ -1,4 +1,4 @@
-{% extends 'core/page/base.html' %}
+{% extends 'core/base/base.html' %}
 
 {% block base_body %}
     {% include 'core/navigation/navigation_side.html' %}
@@ -7,7 +7,7 @@
 
         {% include 'core/navigation/navigation_top.html' %}
 
-        <div class="col-12 px-2">
+        <div class="col-12 px-2 transition-fade" id="swup">
             {% block page_content %}
             {% endblock %}
 {#            {% include 'core/navigation/navigation_bottom.html' %}#}

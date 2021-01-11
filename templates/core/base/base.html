@@ -54,6 +54,18 @@
 <script src="{% static 'core/vendor/chart.js/dist/Chart.extension.js' %}"></script>
 <!-- Argon JS -->
 <script src="{% static 'core/js/argon.js' %}?v=1.2.0"></script>
+<script src="https://unpkg.com/swup@latest/dist/swup.js"></script>
+
+<script type="application/javascript">
+const swup = new Swup();
+
+document.querySelectorAll('[data-href]').forEach(function (element) {
+    element.addEventListener('click', function(event) {
+        swup.loadPage({ url: event.target.dataset.href });
+    });
+});
+</script>
+
 </body>
 
 </html>
