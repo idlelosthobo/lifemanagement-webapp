@@ -9,7 +9,6 @@ class NoteForm(forms.ModelForm):
         super(NoteForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper(self)
         self.helper.include_media = False
-        self.helper.attrs = {'data-swup-form': '', 'data-swup-transition': 'transition-fade', 'action': '?'}
         self.helper.layout = Layout(
             Row(
                 Column('title', css_class='form-group col-md-12 mb-0'),

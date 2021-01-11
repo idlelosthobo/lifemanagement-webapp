@@ -20,7 +20,7 @@
 
     <title>
         {% block base_title %}
-            {{ software.name}}
+            {{ software.name }}
         {% endblock %}
     </title>
 
@@ -57,13 +57,40 @@
 <script src="https://unpkg.com/swup@latest/dist/swup.js"></script>
 
 <script type="application/javascript">
-const swup = new Swup();
+  const swup = new Swup();
 
-document.querySelectorAll('[data-href]').forEach(function (element) {
-    element.addEventListener('click', function(event) {
-        swup.loadPage({ url: event.target.dataset.href });
+  function fadeOutEffect() {
+    var fadeTarget = document.getElementById("swup");
+    var fadeEffect = setInterval(function () {
+      if (!fadeTarget.style.opacity) {
+        fadeTarget.style.opacity = 1;
+      }
+      if (fadeTarget.style.opacity > 0) {
+        fadeTarget.style.opacity -= 0.1;
+      } else {
+        clearInterval(fadeEffect);
+      }
+    }, 40);
+  }
+
+  function init() {
+    document.querySelectorAll('[data-href]').forEach(function (element) {
+      element.addEventListener('click', function (event) {
+        swup.loadPage({url: event.target.dataset.href});
+      });
     });
-});
+
+    document.querySelectorAll('form').forEach(function (element) {
+      element.addEventListener('submit', fadeOutEffect);
+    });
+
+  }
+
+  init()
+
+  swup.on('contentReplaced', init);
+
+
 </script>
 
 </body>
